@@ -7,10 +7,10 @@ var builder = new HostBuilder()
 builder.ConfigureServices(services =>
 {
     services.AddHostedService<AgentRegistrationService>();
-    services.AddHostedService<ContextCreationAgentService>(); // Added context creation agent
+    services.AddHostedService<ContextCreationAgentService>();
     services.AddHttpClient();
+    services.AddSingleton<IContextRetriever, ContextRetriever>(); // Added retriever
 });
 
 var host = builder.Build();
-
 host.Run();
