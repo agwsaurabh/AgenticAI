@@ -1,0 +1,9 @@
+bin/
+obj/
+.vscode/
+*.user
+*.suo
+*.env
+*.key
+*.pfx
+*.csproj.user
