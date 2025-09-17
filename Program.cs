@@ -7,6 +7,7 @@ var builder = new HostBuilder()
 builder.ConfigureServices(services =>
 {
     services.AddHostedService<AgentRegistrationService>();
+    services.AddHostedService<ContextCreationAgentService>(); // Added context creation agent
     services.AddHttpClient();
 });
 
